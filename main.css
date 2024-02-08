@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#sobre-a-loja > .container{
+    display: flex;
+}
+
+header, footer {
+    background-color: rgb(0, 0, 0);
+    padding-top: 16px;
+    color: rgb(255, 0, 0);
+}
+
+header{
+    position: sticky; /*faz o header seguir a rolagem*/
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 2px 0;
+    border-bottom: 2px solid red;
+}
+
+/*comando para a regrar pegar somente no container do header*/
+header > .container,
+footer > .container{
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+/*borda de navegação*/
+nav {
+    background-color: #000000;
+    padding: 16px 0;
+    display: none;
+}
+
+/*lista de navegação*/
+nav li{
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*cor branca e remover o ponto da ordem*/
+nav li a{
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+}
+
+.menu-hamburger{
+    width: 32px;
+    cursor: pointer;
+}
+
+/*estilização do menu hamburger*/
+.menu-hamburger span{
+    height: 2px;
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.container-flex{
+    display: flex;
+} 
+
+#sobre-a-loja{
+    display: flex;
+    font-size: 1.2em;
+    align-items: center;
+}
+
+/*estilização da imagem*/
+#sobre-a-loja img{
+    max-width: 400px;
+    margin-right: 12px;
+    margin-bottom: 1%;
+}
+
+#sobre-a-loja p{
+    margin-top: 1%;
+    padding-bottom: 1%;
+}
+
+/*estilização da seção*/
+section{
+    padding: 48px 0;
+    
+}
+
+/*estilização de todos h2 na seção*/
+section h2{
+    margin-bottom: 16px;
+    border-bottom: 2px solid red;
+}
+
+.lista-de-produtos{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*estilização da seção*/
+.lista-de-produtos li{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: calc(25% - 16px);
+    margin-bottom: 32px;
+    box-sizing: border-box;
+}
+
+/*imagem do produto*/
+.lista-de-produtos img{
+    max-width: 100%;
+    display: block;
+}
+
+/*regra para nome do produto*/
+.lista-de-produtos li h3{
+    margin: 16px 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*botão*/
+button{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 0, 0);
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 16px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+footer li{
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li img{
+    height: 24px;
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 90%;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+
+    #sobre-a-loja > .container{
+        display: block;
+        font-size: 15px;
+    }
+
+    #sobre-a-loja img{
+        max-width: 90%;
+    }
+
+    header {
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav li {
+        display: block;
+    }
+
+    .lista-de-produtos li {
+        width: calc(100% - 16px);
+    }
+
+    .lista-de-produtos img{
+        max-width: 90%;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    footer li img {
+        max-width: 25px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container {
+        padding: 16px 16px; 
+        font-size: 24px;
+    }
+
+    header {
+        padding: 16px 16px;
+    }
+
+    header h1 img {
+        width: 60px; 
+        height: 60px;
+    }
+
+    nav {
+        display: block;
+
+    }
+
+    #sobre-a-loja > .container{
+        display: block;
+        font-size: 32px;
+    }
+
+    #sobre-a-loja .container img {
+        max-width: 500px;
+    }
+
+    #produtos > .container {
+        font-size: 32px;
+    }
+
+    #produtos > .container p {
+        font-size: 24px;
+    }
+
+    #produtos > .container h3 {
+        font-size: 36px;
+    }
+
+    #produtos > .container button{
+        font-size: 24px;
+    }
+
+    nav li {
+        display: block;
+        font-size: 32px;
+    }
+
+    .lista-de-produtos li {
+        width: calc(50% - 16px);
+        
+    }
+
+    .menu-hamburger{
+        width: 48px;
+        cursor: pointer;
+    }
+    
+    /*estilização do menu hamburger*/
+    .menu-hamburger span{
+        height: 4px;
+    }
+}
